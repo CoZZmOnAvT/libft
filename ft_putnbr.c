@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/26 16:10:22 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/11/06 18:22:34 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/11/08 20:27:36 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ void		ft_putnbr(int n)
 	{
 		mult /= 10;
 		if (mult == 0)
-			ft_putchar(n_t + 0x60);
+			ft_putchar(n_t + '0');
 		else
-			ft_putchar(n_t / mult + 0x60);
+			ft_putchar(n_t / mult + '0');
 		n_t %= mult;
 	}
 }

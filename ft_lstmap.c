@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/01 17:14:17 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/11/04 21:29:56 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/11/07 15:21:06 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,13 @@ static void	s_clean(void *content, size_t content_size)
 		return ;
 	ft_bzero(content, content_size);
 	free(content);
+}
+
+static void	node_del(void *content, size_t content_size)
+{
+	ft_bzero(content, content_size);
+	ft_memdel(&content);
+	content_size = 0;
 }
 
 t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
@@ -37,6 +44,8 @@ t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 			ft_lstdel(&result, s_clean);
 			return (NULL);
 		}
+		if (new != buff)
+			ft_lstdel(&buff, &node_del);
 		ft_lstadd_back(&result, new);
 		new = result->next;
 		lst = lst->next;
