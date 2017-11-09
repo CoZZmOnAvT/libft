@@ -6,11 +6,12 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:42:48 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/11/04 14:22:07 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/11/09 18:52:41 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strntrim(char const *s, int c)
 {

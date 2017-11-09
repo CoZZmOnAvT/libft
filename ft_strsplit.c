@@ -6,11 +6,12 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/25 20:24:49 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/11/04 21:27:10 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/11/09 18:52:46 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static size_t	s_count(char const *s, char c)
 {

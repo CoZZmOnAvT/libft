@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:45:39 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/11/04 21:30:17 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/11/09 18:50:15 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 */
 
 # include <string.h>
-# include <stdlib.h>
 
 # define INT_MAX_LEN 10
 

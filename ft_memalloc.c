@@ -6,11 +6,12 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/25 17:35:11 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/11/04 12:29:42 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/11/09 18:51:12 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	*ft_memalloc(size_t size)
 {

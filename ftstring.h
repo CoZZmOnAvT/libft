@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ftstring.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/25 18:23:18 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/11/09 18:52:34 by pgritsen         ###   ########.fr       */
+/*   Created: 2017/11/09 15:04:12 by pgritsen          #+#    #+#             */
+/*   Updated: 2017/11/09 15:29:58 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
+#ifndef FTSTRING_H
+# define FTSTRING_H
 
-char	*ft_strnew(size_t size)
+# include <string.h>
+# include <stdlib.h>
+
+typedef struct	s_string
 {
-	char		*tmp;
-	size_t		it;
+	struct s_string	*prev;
+	char			symb;
+	struct s_string	*next;
+}				t_string;
 
-	tmp = (char *)malloc((size + 1) * sizeof(char));
-	if (tmp == NULL)
-		return (NULL);
-	it = 0;
-	while (it <= size)
-		tmp[it++] = 0;
-	return (tmp);
-}
+t_string		*ft_string_push_back(t_string **dst, const char *s);
+
+#endif

@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/26 21:18:40 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/10/26 21:21:04 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/11/09 19:02:29 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t	len;
+	const char	*p_s;
 
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
+	p_s = s;
+	while (*p_s)
+		p_s++;
+	return (p_s - s);
 }

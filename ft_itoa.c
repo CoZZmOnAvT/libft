@@ -6,11 +6,12 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/25 22:18:12 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/11/05 21:40:35 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/11/09 18:50:50 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char		*ft_itoa(int n)
 {
