@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:45:39 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/12/08 19:54:25 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/12/09 15:32:16 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@
 # define BUFF_SIZE 32
 
 # define M_E 2.7182818284590452354
+
+# define INFINITY 1.0 / 0.0
 
 # define ABS(num)(num < 0 ? -num : num)
 

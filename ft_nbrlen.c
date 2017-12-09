@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 15:39:10 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/12/08 22:02:55 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/12/09 15:33:56 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,8 @@ size_t	ft_nbrflen(double num, long ap)
 {
 	long	decimalp;
 
+	if (num != num || num == INFINITY)
+		return (3);
 	decimalp = (long)num;
 	return (ft_nbrllen(decimalp) + ap + 1);
 }

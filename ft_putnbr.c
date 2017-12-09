@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/26 16:10:22 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/12/09 15:04:25 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/12/09 15:35:01 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,10 @@ void		ft_putfnbr(double num, int ap)
 		ft_putchar('-');
 		num = -num;
 	}
+	if (num != num)
+		return (ft_putstr("nan"));
+	else if (num == INFINITY)
+		return (ft_putstr("inf"));
 	fraction = num - (long)num;
 	ft_putlnbr((long)num);
 	if (ap > 0)
