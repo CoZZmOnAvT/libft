@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/26 16:10:22 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/12/08 22:10:58 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/12/09 15:04:25 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,8 +79,11 @@ void		ft_putfnbr(double num, int ap)
 	if (ap > 0)
 		ft_putchar('.');
 	fraction += 0.5 * ft_pow(0.1, (double)ap);
-	fraction *= ft_pow(10, ap);
-	ft_putlnbr((long)fraction);
+	while (ap-- > 0)
+	{
+		ft_putnbr((long)(fraction *= 10));
+		fraction = fraction - (long)fraction;
+	}
 }
 
 void		ft_putunbr(unsigned int n)

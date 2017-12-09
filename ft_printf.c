@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 20:14:11 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/12/09 14:44:07 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/12/09 15:07:43 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,14 @@ const t_conv		g_conv[] = {
 	{"zc", (void (*)())ft_putchar, ft_ucharlen, 1, NULL, 1, 0},
 	{"jc", (void (*)())ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
 	{"lc", (void (*)())ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
+	{"llc", (void (*)())ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
 	{"hc", (void (*)())ft_putchar, ft_ucharlen, 1, NULL, 1, 0},
 	{"hhc", (void (*)())ft_putchar, ft_ucharlen, 1, NULL, 1, 0},
 	{"C", (void (*)())ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
 	{"zC", (void (*)())ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
 	{"jC", (void (*)())ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
 	{"lC", (void (*)())ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
+	{"llC", (void (*)())ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
 	{"hC", (void (*)())ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
 	{"hhC", (void (*)())ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
 	{"p", ft_putlhex_l, ft_lhexlen, 8, "0x", 1, 0},
