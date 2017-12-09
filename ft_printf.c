@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 20:14:11 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/12/09 14:28:10 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/12/09 14:44:07 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -223,11 +223,15 @@ int						ft_printf(const char *fmt, ...)
 {
 	size_t	chars_printed;
 	va_list	args;
+	int		*tmp;
 
 	chars_printed = 0;
 	va_start(args, fmt);
 	while (*fmt++)
-		if (*(fmt - 1) == '%')
+		if (*(fmt - 1) == '%' && *fmt == 'n'
+			&& (tmp = va_arg(args, int *)) && fmt++)
+			*tmp = chars_printed;
+		else if (*(fmt - 1) == '%')
 			parse_conversions(&fmt, &args, &chars_printed);
 		else if (++chars_printed)
 			ft_putchar(*(fmt - 1));
