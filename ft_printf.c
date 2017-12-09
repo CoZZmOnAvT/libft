@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 20:14:11 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/12/09 15:09:53 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/12/09 18:16:03 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,20 +54,20 @@ const t_conv		g_conv[] = {
 	{"ju", ft_putulnbr, ft_nbrullen, 9, NULL, 1, 0},
 	{"lu", ft_putulnbr, ft_nbrullen, 9, NULL, 1, 0},
 	{"llu", ft_putulnbr, ft_nbrullen, 9, NULL, 1, 0},
-	{"c", (void (*)())ft_putchar, ft_ucharlen, 1, NULL, 1, 0},
-	{"zc", (void (*)())ft_putchar, ft_ucharlen, 1, NULL, 1, 0},
-	{"jc", (void (*)())ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
-	{"lc", (void (*)())ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
-	{"llc", (void (*)())ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
-	{"hc", (void (*)())ft_putchar, ft_ucharlen, 1, NULL, 1, 0},
-	{"hhc", (void (*)())ft_putchar, ft_ucharlen, 1, NULL, 1, 0},
-	{"C", (void (*)())ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
-	{"zC", (void (*)())ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
-	{"jC", (void (*)())ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
-	{"lC", (void (*)())ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
-	{"llC", (void (*)())ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
-	{"hC", (void (*)())ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
-	{"hhC", (void (*)())ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
+	{"c", ft_putchar, ft_ucharlen, 1, NULL, 1, 0},
+	{"zc", ft_putchar, ft_ucharlen, 1, NULL, 1, 0},
+	{"jc", ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
+	{"lc", ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
+	{"llc", ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
+	{"hc", ft_putchar, ft_ucharlen, 1, NULL, 1, 0},
+	{"hhc", ft_putchar, ft_ucharlen, 1, NULL, 1, 0},
+	{"C", ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
+	{"zC", ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
+	{"jC", ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
+	{"lC", ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
+	{"llC", ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
+	{"hC", ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
+	{"hhC", ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
 	{"p", ft_putlhex_l, ft_lhexlen, 8, "0x", 1, 0},
 	{"lp", ft_putlhex_l, ft_lhexlen, 8, "0x", 1, 0},
 	{"llp", ft_putlhex_l, ft_lhexlen, 8, "0x", 1, 0},
@@ -106,18 +106,57 @@ const t_conv		g_conv[] = {
 	{"f", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
 	{"lf", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
 	{"llf", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
-	{"hf", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
-	{"hhf", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
+	{"hf", ft_putfnbr, ft_nbrflen, 13, NULL, 0, 0},
+	{"hhf", ft_putfnbr, ft_nbrflen, 13, NULL, 0, 0},
 	{"zf", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
 	{"jf", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
 	{"F", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
 	{"lF", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
 	{"llF", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
-	{"hF", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
-	{"hhF", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
+	{"hF", ft_putfnbr, ft_nbrflen, 13, NULL, 0, 0},
+	{"hhF", ft_putfnbr, ft_nbrflen, 13, NULL, 0, 0},
 	{"jF", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
 	{"zF", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
 	{{0}, 0, 0, 0, 0, 0, 0}
+};
+
+const t_color		g_colors[] = {
+	{"{nc}", "\033[0m"},
+	{"{default}", "\033[39m"},
+	{"{black}", "\033[30m"},
+	{"{red}", "\033[31m"},
+	{"{green}", "\033[32m"},
+	{"{yellow}", "\033[33m"},
+	{"{blue}", "\033[34m"},
+	{"{magenta}", "\033[35m"},
+	{"{cyan}", "\033[36m"},
+	{"{l_gray}", "\033[37m"},
+	{"{d_gray}", "\033[90m"},
+	{"{l_red}", "\033[91m"},
+	{"{l_green}", "\033[92m"},
+	{"{l_yellow}", "\033[93m"},
+	{"{l_blue}", "\033[94m"},
+	{"{l_magenta}", "\033[95m"},
+	{"{l_cyan}", "\033[96m"},
+	{"{white}", "\033[97m"},
+	{"{b_default}", "\033[49m"},
+	{"{b_black}", "\033[40m"},
+	{"{b_red}", "\033[41m"},
+	{"{b_green}", "\033[42m"},
+	{"{b_yellow}", "\033[43m"},
+	{"{b_blue}", "\033[44m"},
+	{"{b_magenta}", "\033[45m"},
+	{"{b_cyan}", "\033[46m"},
+	{"{b_l_gray}", "\033[47m"},
+	{"{b_d_gray}", "\033[100m"},
+	{"{b_l_red}", "\033[101m"},
+	{"{b_l_green}", "\033[102m"},
+	{"{b_l_yellow}", "\033[103m"},
+	{"{b_l_blue}", "\033[104m"},
+	{"{b_l_magenta}", "\033[105m"},
+	{"{b_l_cyan}", "\033[106m"},
+	{"{b_white}", "\033[107m"},
+	{NULL, NULL}
 };
 
 static int				find_flags(const char *fmt, t_flags *f,
@@ -221,6 +260,22 @@ inline static void		parse_conversions(const char **fmt,
 	parse_flags(f, &c, types, c_p);
 }
 
+inline static void		parse_color(const char **fmt, size_t *c_p)
+{
+	t_color	color;
+	long	it;
+
+	it = -1;
+	while (g_colors[++it].n)
+		if (!ft_strncmp(*fmt, g_colors[it].n, ft_strlen(g_colors[it].n)))
+			break ;
+	if (!(color = g_colors[it]).n && ++*c_p)
+		return (void)(ft_putchar(*(*fmt)++));
+	*fmt += ft_strlen(color.n);
+	*c_p += ft_strlen(color.v);
+	ft_putstr(color.v);
+}
+
 int						ft_printf(const char *fmt, ...)
 {
 	size_t	chars_printed;
@@ -230,7 +285,9 @@ int						ft_printf(const char *fmt, ...)
 	chars_printed = 0;
 	va_start(args, fmt);
 	while (*fmt++)
-		if (*(fmt - 1) == '%' && *fmt == 'n'
+		if (*(fmt - 1) == '{' && fmt--)
+			parse_color(&fmt, &chars_printed);
+		else if (*(fmt - 1) == '%' && *fmt == 'n'
 			&& (tmp = va_arg(args, int *)) && fmt++)
 			*tmp = chars_printed;
 		else if (*(fmt - 1) == '%')

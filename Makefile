@@ -6,7 +6,7 @@
 #    By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/01 13:50:42 by pgritsen          #+#    #+#              #
-#    Updated: 2017/12/08 19:54:37 by pgritsen         ###   ########.fr        #
+#    Updated: 2017/12/09 16:23:37 by pgritsen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME		= 	libftprintf.a
 
 CC			= 	gcc
 
-CFLAGS		= 	-Wextra -Werror -Wall -O3
+CFLAGS		= 	-Wextra -Werror -Wall -O3 -g3
 
 SRCS		= 	ft_lstnew.c ft_strcat.c ft_strncpy.c ft_memalloc.c ft_strchr.c		\
 				ft_strnequ.c ft_memccpy.c ft_strclr.c ft_strnew.c ft_atoi.c			\
@@ -43,21 +43,32 @@ OBJECTS 	= 	$(addprefix $(OBJFOLDER)/, $(SRCS:.c=.o))
 all: $(NAME)
 
 $(NAME): $(OBJFOLDER) $(HDRS) $(OBJECTS) libft.h
-	ar rc $(NAME) $(OBJECTS)
-	ranlib $(NAME)
+	@printf "\033[32m[Creating $(NAME)].......\033[0m"
+	@ar rc $(NAME) $(OBJECTS)
+	@ranlib $(NAME)
+	@printf "\033[32m[DONE]\033[0m\n"
 
 $(OBJFOLDER):
-	mkdir $(OBJFOLDER)
+	@printf "\033[32m[Creating folder $(OBJFOLDER)].......\033[0m"
+	@mkdir $(OBJFOLDER)
+	@printf "\033[32m[DONE]\033[0m\n"
 
 $(OBJECTS): $(OBJFOLDER)/%.o : %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	@printf "\033[32m[Compiling $<].......\033[0m"
+	@$(CC) $(CFLAGS) -c $< -o $@
+	@printf "\033[32m[DONE]\033[0m\n"
 
 clean:
-	rm -rf $(OBJFOLDER)
+	@printf "\033[31m[Cleaning object files].......\033[0m"
+	@rm -rf $(OBJFOLDER)
+	@printf "\033[31m[DONE]\033[0m\n"
 
 fclean: clean
-	rm -f $(NAME)
+	@printf "\033[31m[Cleaning All].......\033[0m"
+	@rm -f $(NAME)
+	@printf "\033[31m[DONE]\033[0m\n"
 
 re: fclean all
+	@printf "\033[33m[Rebuild].......[END]\033[0m\n"
 
 .NOTPARALLEL: all $(NAME) re
