@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 20:14:11 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/12/09 19:54:53 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/12/09 19:58:03 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,6 @@ const t_conv		g_conv[] = {
 	{"lO", ft_putloct, ft_loctlen, 9, "0", 1, 'p'},
 	{"llO", ft_putloct, ft_loctlen, 9, "0", 1, 'p'},
 	{"f", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
-	{"Lf", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
 	{"lf", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
 	{"llf", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
 	{"hf", ft_putfnbr, ft_nbrflen, 13, NULL, 0, 0},
@@ -112,7 +111,6 @@ const t_conv		g_conv[] = {
 	{"zf", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
 	{"jf", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
 	{"F", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
-	{"LF", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
 	{"lF", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
 	{"llF", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
 	{"hF", ft_putfnbr, ft_nbrflen, 13, NULL, 0, 0},
@@ -120,7 +118,6 @@ const t_conv		g_conv[] = {
 	{"jF", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
 	{"zF", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
 	{"e", ft_putenbr_l, ft_nbrelen, 12, NULL, 0, 0},
-	{"Le", ft_putenbr_l, ft_nbrelen, 12, NULL, 0, 0},
 	{"le", ft_putenbr_l, ft_nbrelen, 12, NULL, 0, 0},
 	{"lle", ft_putenbr_l, ft_nbrelen, 12, NULL, 0, 0},
 	{"he", ft_putenbr_l, ft_nbrelen, 13, NULL, 0, 0},
@@ -128,7 +125,6 @@ const t_conv		g_conv[] = {
 	{"ze", ft_putenbr_l, ft_nbrelen, 12, NULL, 0, 0},
 	{"je", ft_putenbr_l, ft_nbrelen, 12, NULL, 0, 0},
 	{"E", ft_putenbr_u, ft_nbrelen, 12, NULL, 0, 0},
-	{"LE", ft_putenbr_u, ft_nbrelen, 12, NULL, 0, 0},
 	{"lE", ft_putenbr_u, ft_nbrelen, 12, NULL, 0, 0},
 	{"llE", ft_putenbr_u, ft_nbrelen, 12, NULL, 0, 0},
 	{"hE", ft_putenbr_u, ft_nbrelen, 13, NULL, 0, 0},

@@ -6,11 +6,11 @@
 #    By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/01 13:50:42 by pgritsen          #+#    #+#              #
-#    Updated: 2017/12/09 18:53:04 by pgritsen         ###   ########.fr        #
+#    Updated: 2017/12/09 19:59:53 by pgritsen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= 	libftprintf.a
+NAME		= 	libft.a
 
 CC			= 	gcc
 
