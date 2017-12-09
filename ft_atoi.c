@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 21:22:28 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/12/04 17:48:36 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/12/09 20:32:38 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ int			ft_atoi(const char *s)
 
 long long	ft_atoll(const char *s)
 {
-	long	result;
-	long	sign;
+	long long	result;
+	int			sign;
 
 	if (*s == 0)
 		return (0);

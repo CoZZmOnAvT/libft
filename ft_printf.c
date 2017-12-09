@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 20:14:11 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/12/09 19:58:03 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/12/09 21:21:01 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,6 +131,34 @@ const t_conv		g_conv[] = {
 	{"hhE", ft_putenbr_u, ft_nbrelen, 13, NULL, 0, 0},
 	{"jE", ft_putenbr_u, ft_nbrelen, 12, NULL, 0, 0},
 	{"zE", ft_putenbr_u, ft_nbrelen, 12, NULL, 0, 0},
+	{"b", ft_putbinary, ft_nbrblen, 9, "0b", 1, 0},
+	{"lb", ft_putbinary, ft_nbrblen, 9, "0b", 1, 0},
+	{"llb", ft_putbinary, ft_nbrblen, 9, "0b", 1, 0},
+	{"hb", ft_putbinary, ft_nbrblen, 9, "0b", 1, 0},
+	{"hhb", ft_putbinary, ft_nbrblen, 9, "0b", 1, 0},
+	{"zb", ft_putbinary, ft_nbrblen, 9, "0b", 1, 0},
+	{"jb", ft_putbinary, ft_nbrblen, 9, "0b", 1, 0},
+	{"B", ft_putbinary, ft_nbrblen, 9, "0B", 1, 0},
+	{"lB", ft_putbinary, ft_nbrblen, 9, "0B", 1, 0},
+	{"llB", ft_putbinary, ft_nbrblen, 9, "0B", 1, 0},
+	{"hB", ft_putbinary, ft_nbrblen, 9, "0B", 1, 0},
+	{"hhB", ft_putbinary, ft_nbrblen, 9, "0B", 1, 0},
+	{"zB", ft_putbinary, ft_nbrblen, 9, "0B", 1, 0},
+	{"jB", ft_putbinary, ft_nbrblen, 9, "0B", 1, 0},
+	{"r", ft_putnnp_l, ft_strnnplen, 8, NULL, 1, 0},
+	{"lr", ft_putnnp_l, ft_strnnplen, 8, NULL, 1, 0},
+	{"llr", ft_putnnp_l, ft_strnnplen, 8, NULL, 1, 0},
+	{"hr", ft_putnnp_l, ft_strnnplen, 8, NULL, 1, 0},
+	{"hhr", ft_putnnp_l, ft_strnnplen, 8, NULL, 1, 0},
+	{"zr", ft_putnnp_l, ft_strnnplen, 8, NULL, 1, 0},
+	{"jr", ft_putnnp_l, ft_strnnplen, 8, NULL, 1, 0},
+	{"R", ft_putnnp_u, ft_strnnplen, 8, NULL, 1, 0},
+	{"lR", ft_putnnp_u, ft_strnnplen, 8, NULL, 1, 0},
+	{"llR", ft_putnnp_u, ft_strnnplen, 8, NULL, 1, 0},
+	{"hR", ft_putnnp_u, ft_strnnplen, 8, NULL, 1, 0},
+	{"hhR", ft_putnnp_u, ft_strnnplen, 8, NULL, 1, 0},
+	{"zR", ft_putnnp_u, ft_strnnplen, 8, NULL, 1, 0},
+	{"jR", ft_putnnp_u, ft_strnnplen, 8, NULL, 1, 0},
 	{{0}, 0, 0, 0, 0, 0, 0}
 };
 

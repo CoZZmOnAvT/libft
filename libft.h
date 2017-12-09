@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:45:39 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/12/09 19:52:11 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/12/09 21:14:36 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -237,5 +237,15 @@ void			ft_putloct(unsigned long n);
 
 size_t			ft_octlen(unsigned int n);
 size_t			ft_loctlen(unsigned long n);
+
+void			ft_putbinary(uintmax_t n);
+
+size_t			ft_nbrblen(unsigned long n);
+
+void			ft_putnnp_l(char const *s, size_t len);
+void			ft_putnnp_u(char const *s, size_t len);
+
+size_t			ft_strnplen(const char *s);
+size_t			ft_strnnplen(const char *s, size_t len);
 
 #endif

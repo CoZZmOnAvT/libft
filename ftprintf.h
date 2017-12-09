@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 14:30:35 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/12/09 18:18:15 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/12/09 20:24:41 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ typedef	unsigned short	t_ush;
 **-----------------------------------------------------------------------------|
 **		Type T_CONV
 **
-**		act			: string with conversion
+**		[act]		: string with conversion
 **
 **		[func]		: a function what will be called
 **
 **		[lf]		: a function what calculate output length
 **
-**		size		: sizeof conversion parameter
+**		[size]		: sizeof conversion parameter
 **		[1		-	char (w_int)]
 **		[2		-	w_int]
 **		[3		-	unsigned char (int)]
