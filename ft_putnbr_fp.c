@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/09 18:43:00 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/12/09 19:43:00 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/12/09 19:48:27 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,7 @@ void		ft_putflnbr(long double num, long ap)
 		ft_putchar('-');
 		num = -num;
 	}
-	if (num != num)
-		return (ft_putstr("nan"));
-	else if (num == INFINITY)
+	if (num == INFINITY)
 		return (ft_putstr("inf"));
 	fraction = num - (intmax_t)num;
 	ft_putlnbr((intmax_t)num);
@@ -88,9 +86,7 @@ void	ft_putelnbr_l(long double num, long ap)
 		ft_putchar('-');
 		num = -num;
 	}
-	if (num != num)
-		return (ft_putstr("nan"));
-	else if (num == INFINITY)
+	if (num == INFINITY)
 		return (ft_putstr("inf"));
 	power = 0;
 	while (num >= 10 && ++power)
@@ -109,9 +105,7 @@ void	ft_putelnbr_u(long double num, long ap)
 		ft_putchar('-');
 		num = -num;
 	}
-	if (num != num)
-		return (ft_putstr("nan"));
-	else if (num == INFINITY)
+	if (num == INFINITY)
 		return (ft_putstr("inf"));
 	power = 0;
 	while (num >= 10 && ++power)
