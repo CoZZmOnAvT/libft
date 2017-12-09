@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 20:14:11 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/12/09 18:16:03 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/12/09 18:58:52 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,20 @@ const t_conv		g_conv[] = {
 	{"hhF", ft_putfnbr, ft_nbrflen, 13, NULL, 0, 0},
 	{"jF", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
 	{"zF", ft_putfnbr, ft_nbrflen, 12, NULL, 0, 0},
+	{"e", ft_putenbr_l, ft_nbrelen, 12, NULL, 0, 0},
+	{"le", ft_putenbr_l, ft_nbrelen, 12, NULL, 0, 0},
+	{"lle", ft_putenbr_l, ft_nbrelen, 12, NULL, 0, 0},
+	{"he", ft_putenbr_l, ft_nbrelen, 13, NULL, 0, 0},
+	{"hhe", ft_putenbr_l, ft_nbrelen, 13, NULL, 0, 0},
+	{"ze", ft_putenbr_l, ft_nbrelen, 12, NULL, 0, 0},
+	{"je", ft_putenbr_l, ft_nbrelen, 12, NULL, 0, 0},
+	{"E", ft_putenbr_u, ft_nbrelen, 12, NULL, 0, 0},
+	{"lE", ft_putenbr_u, ft_nbrelen, 12, NULL, 0, 0},
+	{"llE", ft_putenbr_u, ft_nbrelen, 12, NULL, 0, 0},
+	{"hE", ft_putenbr_u, ft_nbrelen, 13, NULL, 0, 0},
+	{"hhE", ft_putenbr_u, ft_nbrelen, 13, NULL, 0, 0},
+	{"jE", ft_putenbr_u, ft_nbrelen, 12, NULL, 0, 0},
+	{"zE", ft_putenbr_u, ft_nbrelen, 12, NULL, 0, 0},
 	{{0}, 0, 0, 0, 0, 0, 0}
 };
 
