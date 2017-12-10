@@ -150,12 +150,19 @@ const t_conv		g_conv[] = {
 	{"zB", ft_putbinary, ft_nbrblen, 9, "0B", 1, 0},
 	{"jB", ft_putbinary, ft_nbrblen, 9, "0B", 1, 0},
 	{"r", ft_putnnp_l, ft_strnnplen, 8, NULL, 1, 0},
-	{"lr", ft_putnnp_u, ft_strnnplen, 8, NULL, 1, 0},
-	{"llr", ft_putnnp_u, ft_strnnplen, 8, NULL, 1, 0},
+	{"lr", ft_putnnp_l, ft_strnnplen, 8, NULL, 1, 0},
+	{"llr", ft_putnnp_l, ft_strnnplen, 8, NULL, 1, 0},
 	{"hr", ft_putnnp_l, ft_strnnplen, 8, NULL, 1, 0},
 	{"hhr", ft_putnnp_l, ft_strnnplen, 8, NULL, 1, 0},
-	{"zr", ft_putnnp_u, ft_strnnplen, 8, NULL, 1, 0},
-	{"jr", ft_putnnp_u, ft_strnnplen, 8, NULL, 1, 0},
+	{"zr", ft_putnnp_l, ft_strnnplen, 8, NULL, 1, 0},
+	{"jr", ft_putnnp_l, ft_strnnplen, 8, NULL, 1, 0},
+	{"R", ft_putnnp_u, ft_strnnplen, 8, NULL, 1, 0},
+	{"lR", ft_putnnp_u, ft_strnnplen, 8, NULL, 1, 0},
+	{"llR", ft_putnnp_u, ft_strnnplen, 8, NULL, 1, 0},
+	{"hR", ft_putnnp_u, ft_strnnplen, 8, NULL, 1, 0},
+	{"hhR", ft_putnnp_u, ft_strnnplen, 8, NULL, 1, 0},
+	{"zR", ft_putnnp_u, ft_strnnplen, 8, NULL, 1, 0},
+	{"jR", ft_putnnp_u, ft_strnnplen, 8, NULL, 1, 0},
 	{{0}, 0, 0, 0, 0, 0, 0}
 };
 
