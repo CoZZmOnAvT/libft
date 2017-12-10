@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/26 16:10:22 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/12/09 15:35:01 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/12/10 14:49:33 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void		ft_putlnbr(intmax_t n)
 	ft_putstr(ft_strrev(buff));
 }
 
-void		ft_putfnbr(double num, int ap)
+void		ft_putfnbr(double num, long ap)
 {
 	double	fraction;
 

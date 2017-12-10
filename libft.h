@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:45:39 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/12/09 21:14:36 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/12/10 14:52:06 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -194,9 +194,12 @@ void			ft_putendl_fd(char const *s, int fd);
 
 void			ft_putnbr(int n);
 void			ft_putlnbr(long n);
-void			ft_putfnbr(double num, int ap);
-void			ft_putenbr_l(double num, int ap);
-void			ft_putenbr_u(double num, int ap);
+void			ft_putfnbr(double num, long ap);
+void			ft_putlfnbr(long double num, long ap);
+void			ft_putenbr_l(double num, long ap);
+void			ft_putenbr_u(double num, long ap);
+void			ft_putelnbr_l(long double num, long ap);
+void			ft_putelnbr_u(long double num, long ap);
 void			ft_putunbr(unsigned int num);
 void			ft_putulnbr(long unsigned n);
 void			ft_putnbr_fd(int n, int fd);
@@ -222,7 +225,9 @@ size_t			ft_nbrllen(long num);
 size_t			ft_nbrulen(unsigned int num);
 size_t			ft_nbrullen(unsigned long num);
 size_t			ft_nbrflen(double num, long ap);
-size_t			ft_nbrelen(double num, int ap);
+size_t			ft_nbrlflen(long double num, long ap);
+size_t			ft_nbrelen(double num, long ap);
+size_t			ft_nbrellen(long double num, long ap);
 
 void			ft_puthex_l(unsigned int n);
 void			ft_puthex_u(unsigned int n);

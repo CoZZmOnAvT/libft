@@ -6,12 +6,11 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/01 16:07:27 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/11/09 18:53:25 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/12/10 14:57:33 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {

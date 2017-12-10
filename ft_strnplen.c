@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/09 20:39:21 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/12/09 21:17:11 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/12/10 14:26:50 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,9 @@ size_t	ft_strnplen(const char *s)
 	len = 0;
 	--s;
 	while (*++s)
-		if (*s == '\010' || *s == '\014' || *s == '\012' || *s == '\015'
-			|| *s == '\011')
+		if (*s == '\b' || *s == '\f' || *s == '\n' || *s == '\r' || *s == '\t')
 			len += 2;
-		else if (*s <= 31)
+		else if (!ft_isprint(*s))
 			len += 3;
 		else
 			len++;

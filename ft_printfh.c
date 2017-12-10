@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 14:57:34 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/12/09 20:06:35 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/12/10 14:55:25 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,8 @@ inline int		arg_negative(t_basic *arg, t_conv *conv)
 	}
 	else if (conv->size == 14 && !conv->uns && arg->lf < 0 && (neg = 1))
 		arg->lf = ABS(arg->lf);
-	else if (conv->size >= 12 && !conv->uns && arg->f < 0 && (neg = 1))
+	else if (conv->size >= 12 && conv->size <= 13
+		&& !conv->uns && arg->f < 0 && (neg = 1))
 		arg->f = ABS(arg->f);
 	return (neg);
 }

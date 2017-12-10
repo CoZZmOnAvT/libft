@@ -6,12 +6,11 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/01 17:14:17 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/11/09 18:53:52 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/12/10 14:57:29 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static void	s_clean(void *content, size_t content_size)
 {

@@ -6,12 +6,10 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 18:32:18 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/11/22 20:34:57 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/12/10 14:57:05 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <unistd.h>
 #include "libft.h"
 
 static long	n_l_found(char *str)

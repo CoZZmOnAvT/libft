@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/09 20:38:51 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/12/09 21:23:31 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/12/10 14:24:29 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,20 @@
 static void	nonprint_helper(char symb, int (*f)(int c))
 {
 	ft_putchar('\\');
-	if (symb == '\010')
+	if (symb == '\b')
 		ft_putchar(f('b'));
-	else if (symb == '\014')
+	else if (symb == '\f')
 		ft_putchar(f('f'));
-	else if (symb == '\012')
+	else if (symb == '\n')
 		ft_putchar(f('n'));
-	else if (symb == '\015')
+	else if (symb == '\r')
 		ft_putchar(f('r'));
-	else if (symb == '\011')
+	else if (symb == '\t')
 		ft_putchar(f('t'));
 	else
 	{
-		ft_putchar(f(NUMERIC_ALPHABET[symb % 16]));
 		ft_putchar(f(NUMERIC_ALPHABET[symb / 16]));
+		ft_putchar(f(NUMERIC_ALPHABET[symb % 16]));
 	}
 }
 
@@ -41,7 +41,7 @@ void		ft_putnnp_l(char const *s, size_t len)
 	tmpl = ft_strnplen(s);
 	len > tmpl ? len = tmpl : 0;
 	while (*s && len--)
-		if (*s <= 31)
+		if (!ft_isprint(*s))
 			nonprint_helper(*s++, &ft_tolower);
 		else
 			write(1, s++, 1);
@@ -56,7 +56,7 @@ void		ft_putnnp_u(char const *s, size_t len)
 	tmpl = ft_strnplen(s);
 	len > tmpl ? len = tmpl : 0;
 	while (*s && len--)
-		if (*s <= 31)
+		if (!ft_isprint(*s))
 			nonprint_helper(*s++, &ft_toupper);
 		else
 			write(1, s++, 1);
