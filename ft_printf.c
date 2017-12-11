@@ -58,7 +58,7 @@ const t_conv		g_conv[] = {
 	{"zc", ft_putchar, ft_ucharlen, 1, NULL, 1, 0},
 	{"jc", ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
 	{"lc", ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
-	{"llc", ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
+	{"llc", ft_putchar, ft_ucharlen, 1, NULL, 1, 0},
 	{"hc", ft_putchar, ft_ucharlen, 1, NULL, 1, 0},
 	{"hhc", ft_putchar, ft_ucharlen, 1, NULL, 1, 0},
 	{"C", ft_putchar, ft_ucharlen, 2, NULL, 1, 0},
