@@ -27,7 +27,7 @@ void	ft_putchar(t_wint c)
 		ft_putchar_fd(((c >> 6) & 0x3F) + 0x80, 1);
 		ft_putchar_fd((c & 0x3F) + 0x80, 1);
 	}
-	else if (c <= 0x1FFFFF)
+	else if (c <= 0x10FFFF)
 	{
 		ft_putchar_fd((c >> 18) + 0xF0, 1);
 		ft_putchar_fd(((c >> 12) & 0x3F) + 0x80, 1);
