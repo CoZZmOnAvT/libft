@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:45:39 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/12/11 16:53:07 by pgritsen         ###   ########.fr       */
+/*   Updated: 2017/12/11 18:09:19 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,17 @@
 
 # define BUFF_SIZE 32
 
-#ifndef M_E
-# define M_E 2.7182818284590452354
-#endif
+# ifndef M_PI
+#  define M_PI 3.14159265358979323846
+# endif
 
-#ifndef INFINITY
-# define INFINITY 1.0 / 0.0
-#endif
+# ifndef M_E
+#  define M_E 2.7182818284590452354
+# endif
+
+# ifndef INFINITY
+#  define INFINITY 1.0 / 0.0
+# endif
 
 # define ABS(num)(num < 0 ? -num : num)
 
@@ -219,6 +223,8 @@ int				ft_printf(const char *format, ...);
 double			ft_pow(double num, double power);
 
 double			ft_exp(double x);
+
+double			ft_degtorad(double deg);
 
 intmax_t		ft_abs(intmax_t num);
 
