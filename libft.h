@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:45:39 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/12/16 20:30:46 by pgritsen         ###   ########.fr       */
+/*   Updated: 2018/01/05 20:36:22 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,18 @@
 
 # define ABS(num)(num < 0 ? -num : num)
 
+# define ROUND(x)((int)(x + 0.5f))
+
 # define NUMERIC_ALPHABET "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 /*
 **		Typedefs
 */
+
+typedef unsigned char	t_uchar;
+typedef unsigned int	t_uint;
+typedef unsigned long	t_ulong;
+typedef unsigned short	t_ushort;
 
 typedef struct	s_list
 {
