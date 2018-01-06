@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:45:39 by pgritsen          #+#    #+#             */
-/*   Updated: 2018/01/05 20:36:22 by pgritsen         ###   ########.fr       */
+/*   Updated: 2018/01/06 16:02:26 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -271,5 +271,11 @@ void			ft_putnnp_u(char const *s, size_t len);
 
 size_t			ft_strnplen(const char *s);
 size_t			ft_strnnplen(const char *s, size_t len);
+
+void			ft_swap_c(char *a, char *b);
+void			ft_swap_si(short int *a, short int *b);
+void			ft_swap_i(int *a, int *b);
+void			ft_swap_l(long *a, long *b);
+void			ft_swap_f(double *a, double *b);
 
 #endif
