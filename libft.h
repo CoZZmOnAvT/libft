@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:45:39 by pgritsen          #+#    #+#             */
-/*   Updated: 2018/01/06 16:02:26 by pgritsen         ###   ########.fr       */
+/*   Updated: 2018/01/08 21:09:30 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,10 +61,18 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+typedef struct	s_dlist
+{
+	struct s_dlist	*prev;
+	void			*content;
+	size_t			content_size;
+	struct s_dlist	*next;
+}				t_dlist;
+
 typedef int		t_wint;
 
 /*
-**		List functions
+**		Linked list functions
 */
 
 t_list			*ft_lstnew(void const *content, size_t content_size);
@@ -277,5 +285,23 @@ void			ft_swap_si(short int *a, short int *b);
 void			ft_swap_i(int *a, int *b);
 void			ft_swap_l(long *a, long *b);
 void			ft_swap_f(double *a, double *b);
+
+/*
+**		Circular double linked list functions
+*/
+
+t_dlist			*ft_dlstnew(void *content, size_t content_size);
+
+void			ft_dlstpush(t_dlist **dest, t_dlist *src);
+
+void			ft_dlstpush_back(t_dlist **dest, t_dlist *src);
+
+void			ft_dlstdelelem(t_dlist *del);
+
+size_t			ft_dlstsize(t_dlist *dlst);
+
+void			ft_dlstpop(t_dlist *dlst);
+
+void			ft_dlstpop_back(t_dlist *dlst);
 
 #endif
