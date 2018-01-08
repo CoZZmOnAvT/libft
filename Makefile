@@ -6,7 +6,7 @@
 #    By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/01 13:50:42 by pgritsen          #+#    #+#              #
-#    Updated: 2018/01/08 21:06:32 by pgritsen         ###   ########.fr        #
+#    Updated: 2018/01/08 21:13:10 by pgritsen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,12 +62,12 @@ $(OBJECTS): $(OBJFOLDER)/%.o : %.c
 	@printf "\033[32m[DONE]\033[0m\n"
 
 clean:
-	@printf "\033[31m[Cleaning object files].......\033[0m"
+	@printf "\033[31m[Cleaning $(NAME) object files].......\033[0m"
 	@rm -rf $(OBJFOLDER)
 	@printf "\033[31m[DONE]\033[0m\n"
 
 fclean: clean
-	@printf "\033[31m[Cleaning All].......\033[0m"
+	@printf "\033[31m[Removing $(NAME)].......\033[0m"
 	@rm -f $(NAME)
 	@printf "\033[31m[DONE]\033[0m\n"
 
