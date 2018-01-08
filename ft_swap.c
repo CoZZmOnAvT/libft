@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 15:49:25 by pgritsen          #+#    #+#             */
-/*   Updated: 2018/01/06 16:02:29 by pgritsen         ###   ########.fr       */
+/*   Updated: 2018/01/08 21:16:47 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_swap_c(char *a, char *b)
 {
-	intmax_t	buff;
+	char	buff;
 
 	buff = *a;
 	*a = *b;
@@ -23,7 +23,7 @@ void	ft_swap_c(char *a, char *b)
 
 void	ft_swap_si(short int *a, short int *b)
 {
-	intmax_t	buff;
+	short int	buff;
 
 	buff = *a;
 	*a = *b;
@@ -32,7 +32,7 @@ void	ft_swap_si(short int *a, short int *b)
 
 void	ft_swap_i(int *a, int *b)
 {
-	intmax_t	buff;
+	int		buff;
 
 	buff = *a;
 	*a = *b;
@@ -41,7 +41,7 @@ void	ft_swap_i(int *a, int *b)
 
 void	ft_swap_l(long *a, long *b)
 {
-	intmax_t	buff;
+	long	buff;
 
 	buff = *a;
 	*a = *b;
@@ -50,7 +50,7 @@ void	ft_swap_l(long *a, long *b)
 
 void	ft_swap_f(double *a, double *b)
 {
-	intmax_t	buff;
+	double	buff;
 
 	buff = *a;
 	*a = *b;
