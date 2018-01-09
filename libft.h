@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:45:39 by pgritsen          #+#    #+#             */
-/*   Updated: 2018/01/08 21:09:30 by pgritsen         ###   ########.fr       */
+/*   Updated: 2018/01/09 17:51:28 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -296,7 +296,9 @@ void			ft_dlstpush(t_dlist **dest, t_dlist *src);
 
 void			ft_dlstpush_back(t_dlist **dest, t_dlist *src);
 
-void			ft_dlstdelelem(t_dlist *del);
+void			ft_dlstdelelem(t_dlist **del);
+
+void			ft_dlstclear(t_dlist **dlst);
 
 size_t			ft_dlstsize(t_dlist *dlst);
 

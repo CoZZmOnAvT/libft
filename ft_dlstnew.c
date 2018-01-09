@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 20:00:28 by pgritsen          #+#    #+#             */
-/*   Updated: 2018/01/08 20:11:04 by pgritsen         ###   ########.fr       */
+/*   Updated: 2018/01/09 17:47:34 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ t_dlist		*ft_dlstnew(void *content, size_t content_size)
 		return (NULL);
 	new->prev = new;
 	new->next = new;
-	if (!(new->content = malloc(content_size)))
+	if (content_size && !(new->content = malloc(content_size)))
 	{
-		free(new);
+		ft_memdel((void **)&new);
 		return (NULL);
 	}
 	content ? ft_memcpy(new->content, content, content_size) : 0;
