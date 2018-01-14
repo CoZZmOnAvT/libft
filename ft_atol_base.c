@@ -16,7 +16,6 @@ intmax_t	ft_atol_base(const char *s, int base)
 {
 	intmax_t	ret;
 	int			sign;
-	int			it;
 	int			tmp;
 
 	if (base < 2 || base > 36)
@@ -31,7 +30,6 @@ intmax_t	ft_atol_base(const char *s, int base)
 	if (*s == '-' || *s == '+')
 		s++;
 	ret = 0;
-	it = 0;
 	while (ft_isalnum(*s))
 	{
 		if ((tmp = ft_strclen(NUMERIC_ALPHABET, *s++)) > base)
