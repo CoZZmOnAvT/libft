@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/25 20:24:49 by pgritsen          #+#    #+#             */
-/*   Updated: 2018/01/12 13:50:26 by pgritsen         ###   ########.fr       */
+/*   Updated: 2018/02/02 12:49:12 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static int		add_vord(char **list, size_t *it, char **p_s, char c)
 	ft_strlcat(list[(*it)++], (*p_s += w_l) - w_l, w_l + 1);
 	*p_s = ft_strntrim(*p_s, c);
 	free(trash);
-	return (1); 
+	return (1);
 }
 
 char			**ft_strsplit(char const *s, char c)
@@ -68,7 +68,8 @@ char			**ft_strsplit(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	s_c = (long)s_count((p_s = ft_strntrim(s, c)), c);
+	p_s = ft_strntrim(s, c);
+	s_c = (long)s_count(p_s, c);
 	if (!(list = (char **)malloc(sizeof(char *) * (s_c + 1))))
 		return (NULL);
 	!*p_s ? *list = (char *)--s_c : 0;
