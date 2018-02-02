@@ -6,7 +6,7 @@
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/16 20:21:05 by pgritsen          #+#    #+#             */
-/*   Updated: 2017/12/16 20:29:37 by pgritsen         ###   ########.fr       */
+/*   Updated: 2018/02/02 12:53:53 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ intmax_t	ft_atol_base(const char *s, int base)
 	ret = 0;
 	while (ft_isalnum(*s))
 	{
-		if ((tmp = ft_strclen(NUMERIC_ALPHABET, *s++)) > base)
+		if ((tmp = ft_strclen(NUMERIC_ALPHABET, ft_toupper(*s++))) > base)
 			break ;
 		ret = (ret * base) + tmp;
 	}
