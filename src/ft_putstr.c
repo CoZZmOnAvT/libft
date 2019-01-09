@@ -14,9 +14,12 @@
 
 void	ft_putstr(char const *s)
 {
+	int	ret;
+
 	if (!s)
 		return (ft_putstr("(null)"));
-	FT_IGNORE(write(1, s, ft_strlen(s)));
+	ret = write(1, s, ft_strlen(s));
+	FT_IGNORE(ret);
 }
 
 void	ft_putustr(t_wint const *s)
@@ -30,12 +33,14 @@ void	ft_putustr(t_wint const *s)
 void	ft_putnstr(char const *s, size_t len)
 {
 	size_t	tmp;
+	int		ret;
 
 	if (!s)
 		return (ft_putstr("(null)"));
 	tmp = ft_strlen(s);
 	len > tmp ? len = tmp : 0;
-	FT_IGNORE(write(1, s, len));
+	ret = write(1, s, len);
+	FT_IGNORE(ret);
 }
 
 void	ft_putunstr(t_wint const *s, size_t len)

@@ -35,6 +35,7 @@ static void	nonprint_helper(char symb, int (*f)(int c))
 void		ft_putnnp_l(char const *s, size_t len)
 {
 	size_t	tmpl;
+	int		ret;
 
 	if (!s)
 		return (ft_putstr("(null)"));
@@ -44,12 +45,16 @@ void		ft_putnnp_l(char const *s, size_t len)
 		if (!ft_isprint(*s))
 			nonprint_helper(*s++, &ft_tolower);
 		else
-			FT_IGNORE(write(1, s++, 1));
+		{
+			ret = write(1, s++, 1);
+			FT_IGNORE(ret);
+		}
 }
 
 void		ft_putnnp_u(char const *s, size_t len)
 {
 	size_t	tmpl;
+	int		ret;
 
 	if (!s)
 		return (ft_putstr("(null)"));
@@ -59,5 +64,8 @@ void		ft_putnnp_u(char const *s, size_t len)
 		if (!ft_isprint(*s))
 			nonprint_helper(*s++, &ft_toupper);
 		else
-			FT_IGNORE(write(1, s++, 1));
+		{
+			ret = write(1, s++, 1);
+			FT_IGNORE(ret);
+		}
 }

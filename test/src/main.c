@@ -3,10 +3,10 @@
 /*                                                                            */
 /*   main.c                                                                   */
 /*                                                                            */
-/*   By: cozzmonavt                                                           */
+/*   By: phrytsenko                                                           */
 /*                                                                            */
 /*   Created: 2019/01/02 16:17:55 by cozzmonavt                               */
-/*   Updated: 2019/01/05 23:29:02 by cozzmonavt                               */
+/*   Updated: 2019/01/08 16:58:22 by phrytsenko                               */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1059,6 +1059,66 @@ void test_ft_strnequ(void)
 	TEST_ASSERT_MESSAGE(ft_strnequ(empty_string, empty_string, 1) == 1, "Empty strings are equal");
 }
 
+void test_ft_strlcat(void)
+{
+	{
+		char data[16] = "Hello";
+		char const * s = " World";
+
+		TEST_ASSERT_EQUAL_INT64(11, ft_strlcat(data, s, strlen(s) + 1));
+		TEST_ASSERT_EQUAL_STRING("Hello ", data);
+	}
+	{
+		char data[16] = "Hello";
+		char const * s = " World";
+
+		TEST_ASSERT_EQUAL_INT64(11, ft_strlcat(data, s, sizeof(data)));
+		TEST_ASSERT_EQUAL_STRING("Hello World", data);
+	}
+	{
+		char data[16] = "Hello";
+		char const * s = " World";
+
+		TEST_ASSERT_EQUAL_INT64(7, ft_strlcat(data, s, 1));
+		TEST_ASSERT_EQUAL_STRING("Hello", data);
+	}
+	{
+		char data[16] = "Hello";
+		char const * s = " World";
+
+		TEST_ASSERT_EQUAL_INT64(11, ft_strlcat(data, s, -1));
+		TEST_ASSERT_EQUAL_STRING("Hello World", data);
+	}
+	{
+		char data[16] = "Hello";
+		char const * s = " World";
+
+		TEST_ASSERT_EQUAL_INT64(6, ft_strlcat(data, s, 0));
+		TEST_ASSERT_EQUAL_STRING("Hello", data);
+	}
+	{
+		char data[16] = "Hello";
+		char const * s = " World";
+
+		TEST_ASSERT_EQUAL_INT64(11, ft_strlcat(data, s, strlen(data) + strlen(s) + 1));
+		TEST_ASSERT_EQUAL_STRING("Hello World", data);
+	}
+	{
+		char data[16] = "Hello";
+		char const * s = " World";
+
+		TEST_ASSERT_EQUAL_INT64(11, ft_strlcat(data, s, strlen(data) + strlen(s) - 1));
+		TEST_ASSERT_EQUAL_STRING("Hello Wor", data);
+	}
+	{
+		char data[16] = "Hello";
+		char const * s = " World";
+
+		TEST_ASSERT_EQUAL_INT64(11, ft_strlcat(data, s, strlen(data) + 1));
+		TEST_ASSERT_EQUAL_STRING("Hello", data);
+	}
+}
+
 int main(int ac, char **argv)
 {
 	(void)ac;
@@ -1135,5 +1195,6 @@ int main(int ac, char **argv)
 	RUN_TEST(test_ft_strcpy);
 	RUN_TEST(test_ft_strequ);
 	RUN_TEST(test_ft_strnequ);
+	RUN_TEST(test_ft_strlcat);
 	return (UNITY_END());
 }

@@ -11,11 +11,15 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 void	ft_putendl(char const *s)
 {
+	int ret;
+
 	if (!s)
 		return ;
 	ft_putstr(s);
-	FT_IGNORE(write(1, "\n", 1));
+	ret = write(1, "\n", 1);
+	FT_IGNORE(ret);
 }
