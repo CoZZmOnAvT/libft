@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dlstindex.c                                     :+:      :+:    :+:   */
+/*   ft_dlstupdate_indexes.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pgritsen <pgritsen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/08 20:53:36 by pgritsen          #+#    #+#             */
-/*   Updated: 2018/01/09 17:51:26 by pgritsen         ###   ########.fr       */
+/*   Created: 2018/01/08 20:58:45 by pgritsen          #+#    #+#             */
+/*   Updated: 2018/01/08 21:03:27 by pgritsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_dlist	*ft_dlstindex(t_dlist *dlst, ssize_t index)
+void  ft_dlstupdate_indexes(t_dlist *dlst)
 {
+	t_dlist	*tmp;
+	size_t	i;
+
 	if (!dlst)
-		return (NULL);
-	while (dlst->index != index)
-		dlst = dlst->next;
-	return (dlst);
+		return ;
+	i = 0;
+	tmp = dlst;
+	while ((tmp = tmp->next) != dlst)
+		tmp->index = i++;
 }

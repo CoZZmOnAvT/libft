@@ -69,6 +69,7 @@ typedef struct	s_dlist
 	struct s_dlist	*prev;
 	void			*content;
 	size_t			content_size;
+	ssize_t			index;
 	struct s_dlist	*next;
 }				t_dlist;
 
@@ -77,8 +78,6 @@ typedef int		t_wint;
 /*
 **		Linked list functions
 */
-
-t_dlist			*ft_dlstindex(t_dlist *lst, size_t index);
 
 t_list			*ft_lstnew(void const *content, size_t content_size);
 
@@ -332,6 +331,13 @@ t_dlist			*ft_dlstmerge(t_dlist **a, t_dlist **b);
 
 t_dlist			*ft_strsplit_dlst(char const *s, char c);
 
-t_dlist         *ft_dlstindex(t_dlist *lst, size_t index);
+void			ft_dlstupdate_indexes(t_dlist *dlst);
+
+void			ft_dlstswap_content(t_dlist *a, t_dlist *b);
+
+t_dlist			*ft_dlstindex(t_dlist *lst, ssize_t index);
+
+void			ft_dlstsort(t_dlist *begin, t_dlist *end,
+							int (*cmp)(void *, void *));
 
 #endif
