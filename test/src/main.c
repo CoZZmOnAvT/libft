@@ -18,6 +18,9 @@
 
 char * g_executable_path;
 
+void setUp (void) {} /* Is run before every test, put unit init calls here. */
+void tearDown (void) {} /* Is run after every test, put unit clean-up calls here. */
+
 void test_ft_abs(void)
 {
 	TEST_ASSERT_EQUAL_INT64(0, ft_abs(0));
