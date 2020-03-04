@@ -85,7 +85,7 @@ void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 
 void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 
-void			ft_lstadd(t_list **alst, t_list *new);
+void			ft_lstadd(t_list **alst, t_list *node);
 
 void			ft_lstadd_back(t_list **dst, t_list *src);
 
