@@ -639,7 +639,7 @@ void test_ft_lstmap(void)
 
 	func[0] = &util_lst_map_malloc;
 	func[1] = &util_lst_map_mreuse;
-	for (uint i = 0; i < sizeof(func) / sizeof(*func); i++)
+	for (uint32_t i = 0; i < sizeof(func) / sizeof(*func); i++)
 	{
 		t_list	*sp = NULL;
 		t_list	*new_sp = NULL;
