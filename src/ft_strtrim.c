@@ -20,14 +20,15 @@ char	*ft_strtrim(char const *s)
 
 	if (!s)
 		return (NULL);
-	while (*s && (*s == ' ' || *s == '\n' || *s == '\t'))
+	while (*s && (*s == ' ' || *s == '\n' || *s == '\r' || *s == '\t'))
 		s++;
 	c_l = 0;
 	while (s[c_l])
 		c_l++;
 	if (c_l)
 		c_l--;
-	while (s[c_l] && (s[c_l] == ' ' || s[c_l] == '\n' || s[c_l] == '\t'))
+	while (s[c_l] && (s[c_l] == ' ' || s[c_l] == '\n'
+			|| s[c_l] == '\r' || s[c_l] == '\t'))
 		c_l--;
 	if (!(new = (char *)malloc(sizeof(char) * (c_l + 2))))
 		return (NULL);
