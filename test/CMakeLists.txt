@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION "3.2")
+cmake_minimum_required(VERSION 3.5.2)
 project(ft_test LANGUAGES C VERSION 0.0.1)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wextra -Wall -Werror")

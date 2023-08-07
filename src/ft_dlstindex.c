@@ -14,9 +14,10 @@
 
 t_dlist	*ft_dlstindex(t_dlist *dlst, ssize_t index)
 {
-	if (!dlst)
-		return (NULL);
-	while (dlst->index != index)
-		dlst = dlst->next;
-	return (dlst);
+	t_dlist	*ret;
+
+	ret = dlst;
+	while (ret && (ret = ret->next) != dlst && index--)
+		;
+	return (index && ret != dlst ? ret : 0);
 }

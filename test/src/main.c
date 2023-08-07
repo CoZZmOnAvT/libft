@@ -168,7 +168,7 @@ void test_ft_dlstnew(void)
 	}
 	{
 		char const str[] = "Hello World";
-		t_dlist	*node = ft_dlstnew(str, sizeof(str));
+		t_dlist	*node = ft_dlstnew(ft_strdup(str), sizeof(str));
 
 		TEST_ASSERT_EQUAL_STRING(str, node->content);
 		TEST_ASSERT_EQUAL_INT64(sizeof(str), node->content_size);
@@ -182,7 +182,7 @@ void test_ft_dlstpush(void)
 	char const str2[] = "Bye World";
 	t_dlist	*node = NULL;
 
-	ft_dlstpush(&node, ft_dlstnew(str, sizeof(str)));
+	ft_dlstpush(&node, ft_dlstnew(ft_strdup(str), sizeof(str)));
 	// The first item of the list is always should be zero content and zero size, it's an anchor to know the beginning
 	TEST_ASSERT_EQUAL_PTR(NULL, node->content);
 	TEST_ASSERT_EQUAL_INT64(0, node->content_size);
@@ -191,7 +191,7 @@ void test_ft_dlstpush(void)
 	TEST_ASSERT_EQUAL_STRING(str, node->prev->content);
 	TEST_ASSERT_EQUAL_INT64(sizeof(str), node->prev->content_size);
 
-	ft_dlstpush(&node, ft_dlstnew(str2, sizeof(str2)));
+	ft_dlstpush(&node, ft_dlstnew(ft_strdup(str2), sizeof(str2)));
 	TEST_ASSERT_EQUAL_STRING(str2, node->next->content);
 	TEST_ASSERT_EQUAL_INT64(sizeof(str2), node->next->content_size);
 	TEST_ASSERT_EQUAL_STRING(str, node->next->next->content);
@@ -207,7 +207,7 @@ void test_ft_dlstpush_back(void)
 	char const str2[] = "Bye World";
 	t_dlist	*node = NULL;
 
-	ft_dlstpush_back(&node, ft_dlstnew(str, sizeof(str)));
+	ft_dlstpush_back(&node, ft_dlstnew(ft_strdup(str), sizeof(str)));
 	// The first item of the list is always should be zero content and zero size, it's an anchor to know the beginning
 	TEST_ASSERT_EQUAL_PTR(NULL, node->content);
 	TEST_ASSERT_EQUAL_INT64(0, node->content_size);
@@ -216,7 +216,7 @@ void test_ft_dlstpush_back(void)
 	TEST_ASSERT_EQUAL_STRING(str, node->prev->content);
 	TEST_ASSERT_EQUAL_INT64(sizeof(str), node->prev->content_size);
 
-	ft_dlstpush_back(&node, ft_dlstnew(str2, sizeof(str2)));
+	ft_dlstpush_back(&node, ft_dlstnew(ft_strdup(str2), sizeof(str2)));
 	TEST_ASSERT_EQUAL_STRING(str, node->next->content);
 	TEST_ASSERT_EQUAL_INT64(sizeof(str), node->next->content_size);
 	TEST_ASSERT_EQUAL_STRING(str2, node->next->next->content);
@@ -231,8 +231,8 @@ void test_ft_dlstpop(void)
 	char const str2[] = "Bye World";
 	t_dlist	*node = NULL;
 
-	ft_dlstpush(&node, ft_dlstnew(str, sizeof(str)));
-	ft_dlstpush(&node, ft_dlstnew(str2, sizeof(str2)));
+	ft_dlstpush(&node, ft_dlstnew(ft_strdup(str), sizeof(str)));
+	ft_dlstpush(&node, ft_dlstnew(ft_strdup(str2), sizeof(str2)));
 
 	TEST_ASSERT_EQUAL_STRING(str2, node->next->content);
 	TEST_ASSERT_EQUAL_INT64(sizeof(str2), node->next->content_size);
@@ -249,8 +249,8 @@ void test_ft_dlstpop_back(void)
 	char const str2[] = "Bye World";
 	t_dlist	*node = NULL;
 
-	ft_dlstpush(&node, ft_dlstnew(str, sizeof(str)));
-	ft_dlstpush(&node, ft_dlstnew(str2, sizeof(str2)));
+	ft_dlstpush(&node, ft_dlstnew(ft_strdup(str), sizeof(str)));
+	ft_dlstpush(&node, ft_dlstnew(ft_strdup(str2), sizeof(str2)));
 
 	TEST_ASSERT_EQUAL_STRING(str2, node->next->content);
 	TEST_ASSERT_EQUAL_INT64(sizeof(str2), node->next->content_size);
@@ -264,7 +264,7 @@ void test_ft_dlstpop_back(void)
 void test_ft_dlstdelelem(void)
 {
 	char const str[] = "Hello World";
-	t_dlist	*node = ft_dlstnew(str, sizeof(str));
+	t_dlist	*node = ft_dlstnew(ft_strdup(str), sizeof(str));
 
 	ft_dlstdelelem(&node);
 	TEST_ASSERT_EQUAL_PTR(NULL, node);

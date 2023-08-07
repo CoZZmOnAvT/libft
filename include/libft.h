@@ -69,7 +69,6 @@ typedef struct	s_dlist
 	struct s_dlist	*prev;
 	void			*content;
 	size_t			content_size;
-	ssize_t			index;
 	struct s_dlist	*next;
 }				t_dlist;
 
@@ -311,7 +310,7 @@ size_t			ft_cinustrcn(const char *s, size_t n);
 **		Circular double linked list functions
 */
 
-t_dlist			*ft_dlstnew(void const *content, size_t content_size);
+t_dlist			*ft_dlstnew(void *content, size_t content_size);
 
 void			ft_dlstpush(t_dlist **dest, t_dlist *src);
 
