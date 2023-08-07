@@ -59,8 +59,8 @@ typedef	unsigned short	t_ush;
 typedef struct			s_conv
 {
 	char	act[16];
-	void	(*func)();
-	size_t	(*lf)();
+	void	*func;
+	void	*lf;
 	char	size;
 	char	*prefix;
 	int		uns;
@@ -174,9 +174,12 @@ typedef struct			s_color
 	char	*v;
 }						t_color;
 
-# define LDOUBLE(f, a, v, t)(t < 14 ? f(*(double *)&v, a) : f(*(t_ld *)&v, a))
+# define LDBL(f, v, a)(((size_t(*)(t_ld, long))f)(*(t_ld *)&v, a))
+# define DBL(f, v, a)(((size_t(*)(double, long))f)(*(double *)&v, a))
+# define INTG(f, v, a)(((size_t(*)(void*, long))f)(*(void **)&v, a))
 
-# define FTCALL(f, a, v, t)(t < 12 ? f(*(void **)&v, a) : LDOUBLE(f, a, v, t))
+# define FPOINT(f, a, v, t)(t < 14 ? DBL(f, v, a) : LDBL(f, v, a))
+# define FTCALL(f, a, v, t)(t < 12 ? INTG(f, v, a) : FPOINT(f, a, v, t))
 
 void					set_types(t_conv *conv, va_list *args, t_basic *types);
 
